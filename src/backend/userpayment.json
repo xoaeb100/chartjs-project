@@ -1,0 +1,99 @@
+[
+  {
+    "id": 1,
+    "mode_o_paymt": "cash"
+  },
+  {
+    "id": 2,
+    "mode_o_paymt": "online-paid"
+  },
+  {
+    "id": 2,
+    "mode_o_paymt": "online-paid"
+  },
+  {
+    "id": 2,
+    "mode_o_paymt": "online-paid"
+  },
+  {
+    "id": 2,
+    "mode_o_paymt": "online-paid"
+  },
+  {
+    "id": 2,
+    "mode_o_paymt": "online-paid"
+  },
+  {
+    "id": 2,
+    "mode_o_paymt": "online-paid"
+  },
+  {
+    "id": 2,
+    "mode_o_paymt": "online-paid"
+  },
+  {
+    "id": 1,
+    "mode_o_paymt": "not-paid"
+  },
+  {
+    "id": 1,
+    "mode_o_paymt": "not-paid"
+  },
+  {
+    "id": 1,
+    "mode_o_paymt": "not-paid"
+  },
+  {
+    "id": 1,
+    "mode_o_paymt": "not-paid"
+  },
+  {
+    "id": 1,
+    "mode_o_paymt": "not-paid"
+  },
+  {
+    "id": 1,
+    "mode_o_paymt": "not-paid"
+  },
+
+  {
+    "id": 1,
+    "mode_o_paymt": "cash"
+  },
+  {
+    "id": 1,
+    "mode_o_paymt": "online-paid"
+  },
+  {
+    "id": 1,
+    "mode_o_paymt": "online-paid"
+  },
+  {
+    "id": 1,
+    "mode_o_paymt": "online-paid"
+  },
+  {
+    "id": 1,
+    "mode_o_paymt": "online-paid"
+  },
+  {
+    "id": 1,
+    "mode_o_paymt": "online-paid"
+  },
+  {
+    "id": 1,
+    "mode_o_paymt": "online-paid"
+  },
+  {
+    "id": 1,
+    "mode_o_paymt": "online-paid"
+  },
+  {
+    "id": 1,
+    "mode_o_paymt": "cash"
+  },
+  {
+    "id": 1,
+    "mode_o_paymt": "not-paid"
+  }
+]

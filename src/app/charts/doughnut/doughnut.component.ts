@@ -1,5 +1,27 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import Chart from 'chart.js/auto';
+import data from '../../../backend/userpayment.json';
+
+let dataval: any = [];
+
+const val = data.map(function (elements: any) {
+  dataval.push(elements['mode_o_paymt']);
+});
+
+console.log(dataval);
+// console.log(dataval.filter((x: any) => x == 'cash').length);
+
+const count: any = {};
+
+for (const element of dataval) {
+  if (count[element]) {
+    count[element] += 1;
+  } else {
+    count[element] = 1;
+  }
+}
+
+console.log(count);
 
 @Component({
   selector: 'app-doughnut',
@@ -19,7 +41,7 @@ export class DoughnutComponent {
 
     this.ctx = this.canvas.getContext('2d');
 
-    const data1 = [48, 25, 12];
+    const data1 = [count['cash'], count['online-paid'], count['not-paid']];
 
     const doooo = new Chart(this.ctx, {
       type: 'doughnut',
@@ -48,7 +70,7 @@ export class DoughnutComponent {
             hoverOffset: 8,
           },
         ],
-        labels: ['Paid', 'Not-paid', 'Paid in Cash'],
+        labels: ['Cash', 'Online-Paid', 'Not-paid'],
       },
     });
   }
