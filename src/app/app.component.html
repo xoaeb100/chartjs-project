@@ -16,30 +16,25 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
-        <div class="col">
-          <div class="chart doughnut-graph">
-            <app-doughnut></app-doughnut>
-          </div>
+        <div class="chart doughnut-graph col">
+          <app-doughnut></app-doughnut>
         </div>
-        <div class="col">
-          <div class="chart pie-graph">
-            <app-pie></app-pie>
-          </div>
-        </div>
-        <div class="col">
-          <div class="chart bar-graph">
-            <app-bar></app-bar>
-          </div>
-        </div>
-      </div>
 
-      <div class="chart line-graph">
-        <app-line></app-line>
+        <div class="chart pie-graph col">
+          <app-pie></app-pie>
+        </div>
+
+        <div class="chart bar-graph col">
+          <app-bar></app-bar>
+        </div>
       </div>
     </div>
 
+    <div class="chart line-graph">
+      <app-line></app-line>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
