@@ -1,11 +1,12 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import Chart from 'chart.js/auto';
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'app-line',
+  templateUrl: './line.component.html',
+  styleUrls: ['./line.component.scss'],
 })
-export class AppComponent {
+export class LineComponent {
+  constructor() {}
   title = 'chartjs-project';
   canvas: any;
   ctx: any;
@@ -16,8 +17,8 @@ export class AppComponent {
 
     this.ctx = this.canvas.getContext('2d');
 
-    const data1 = [0, 20, 40, 52, 55, 35, 21, 12, 25, 56, 65, 70];
-    const data2 = [0, 15, 22, 40, 60, 50, 19, 22, 30, 58, 47, 60];
+    const data1 = [15, 20, 40, 52, 55, 35, 21, 12, 25, 56, 65, 70];
+    const data2 = [18, 15, 22, 40, 60, 50, 19, 22, 30, 58, 47, 60];
 
     new Chart(this.ctx, {
       type: 'line',
