@@ -47,12 +47,6 @@ export class DoughnutComponent {
       type: 'doughnut',
       options: {
         plugins: { title: { display: true, text: 'Mode of payment' } },
-
-        scales: {
-          y: {
-            beginAtZero: true,
-          },
-        },
       },
       data: {
         datasets: [

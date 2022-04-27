@@ -26,11 +26,6 @@ export class PieComponent {
 
       options: {
         plugins: { title: { display: true, text: 'Guest entry count' } },
-        scales: {
-          y: {
-            beginAtZero: true,
-          },
-        },
       },
       data: {
         datasets: [

@@ -1,0 +1,21 @@
+ul {
+  display: flex;
+  justify-content: center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // margin: 0;
+
+  // &.bottom {
+  //   box-shadow: 0px 15px 10px -15px rgb(77, 77, 77);
+  // }
+  li {
+    list-style: none;
+    padding: 4px 10rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  :hover {
+    color: blue;
+  }
+}
