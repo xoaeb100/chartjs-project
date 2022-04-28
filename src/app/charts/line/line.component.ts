@@ -17,25 +17,33 @@ export class LineComponent {
 
     this.ctx = this.canvas.getContext('2d');
 
-    const data1 = [80, 75, 77, 72, 74, 75, , 73, 71, 79, 77, 72, 74, , 80, 77, 72, 74];
-    const data2 = [72, 78, 68, 65, 62, 67, , 77, 65, 75, 68, 65, 62, , 77, 68, 65, 62];
-    const data3 = [67, 70, 66, 61, 58, 63, , 69, 70, 65, 66, 61, 58, , 64, 66, 61, 58];
+    const data1 = [80, 75, 77, 72, 74, 75, 73, 71, 79, 77];
+    const data2 = [72, 78, 68, 65, 62, 67, 77, 65, 75, 68];
+    const data3 = [67, 70, 66, 61, 58, 63, 69, 70, 65, 66];
+    const data4 = [70, 65, 63, 67, 62, 57, 60, 60, 63, 66];
+    const data5 = [67, 70, 66, 61, 58, 63, 69, 70, 65, 66];
+    const data6 = [67, 70, 66, 61, 58, 63, 69, 70, 65, 66];
 
 
     new Chart(this.ctx, {
       type: 'line',
       options: {
-        plugins: { title: { display: true, text: 'Attendance of each STD per day ' } },
+        plugins: {
+          title: {
+            display: true,
+            text: 'Avg Attendance of each STD per week ',
+          },
+        },
         scales: {
           y: {
-            beginAtZero: true,
+            min: 50,
           },
         },
       },
       data: {
         datasets: [
           {
-            tension: 0.5,
+            tension: 0.2,
             label: 'V',
             data: data1,
             backgroundColor: '#4f3d7a',
@@ -46,7 +54,7 @@ export class LineComponent {
             label: 'VI',
             data: data2,
             backgroundColor: '#009ee9',
-            tension: 0.5,
+            tension: 0.2,
 
             borderColor: '#009ee9',
           },
@@ -54,12 +62,31 @@ export class LineComponent {
             label: 'VII',
             data: data3,
             backgroundColor: '#f76284',
-            tension: 0.5,
+            tension: 0.2,
 
             borderColor: '#f76284',
           },
+          {
+            tension: 0.2,
+            label: 'VIII',
+            data: data4,
+            backgroundColor: '#4fa745',
+
+            borderColor: '#4fa745',
+          },
         ],
-        labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10','11','12','13','14','15','16','17','18'],
+        labels: [
+          'Week 1',
+          'Week 2',
+          'Week 3',
+          'Week 4',
+          'Week 5',
+          'Week 6',
+          'Week 7',
+          'Week 8',
+          'Week 9',
+          'Week 10',
+        ],
       },
     });
   }
