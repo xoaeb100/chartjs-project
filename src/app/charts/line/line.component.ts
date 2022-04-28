@@ -17,13 +17,15 @@ export class LineComponent {
 
     this.ctx = this.canvas.getContext('2d');
 
-    const data1 = [15, 20, 40, 52, 55, 35, 21, 12, 25, 56, 65, 70];
-    const data2 = [18, 15, 22, 40, 60, 50, 19, 22, 30, 58, 47, 60];
+    const data1 = [80, 75, 77, 72, 74, 75, , 73, 71, 79, 77, 72, 74, , 80, 77, 72, 74];
+    const data2 = [72, 78, 68, 65, 62, 67, , 77, 65, 75, 68, 65, 62, , 77, 68, 65, 62];
+    const data3 = [67, 70, 66, 61, 58, 63, , 69, 70, 65, 66, 61, 58, , 64, 66, 61, 58];
+
 
     new Chart(this.ctx, {
       type: 'line',
       options: {
-        plugins: { title: { display: true, text: 'Parking usage' } },
+        plugins: { title: { display: true, text: 'Attendance of each STD per day ' } },
         scales: {
           y: {
             beginAtZero: true,
@@ -34,35 +36,30 @@ export class LineComponent {
         datasets: [
           {
             tension: 0.5,
-            label: 'Cars In',
+            label: 'V',
             data: data1,
             backgroundColor: '#4f3d7a',
 
             borderColor: '#4f3d7a',
           },
           {
-            label: 'Cars out',
+            label: 'VI',
             data: data2,
             backgroundColor: '#009ee9',
             tension: 0.5,
 
             borderColor: '#009ee9',
           },
+          {
+            label: 'VII',
+            data: data3,
+            backgroundColor: '#f76284',
+            tension: 0.5,
+
+            borderColor: '#f76284',
+          },
         ],
-        labels: [
-          'January 2021',
-          'February 2021',
-          'March 2021',
-          'April 2021',
-          'May 2021',
-          'June 2021',
-          'July 2021',
-          'August 2021',
-          'September 2021',
-          'October 2021',
-          'November 2021',
-          'December 2021',
-        ],
+        labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10','11','12','13','14','15','16','17','18'],
       },
     });
   }

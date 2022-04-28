@@ -2,12 +2,13 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import Chart from 'chart.js/auto';
 
 @Component({
-  selector: 'app-pie',
-  templateUrl: './pie.component.html',
-  styleUrls: ['./pie.component.scss'],
+  selector: 'app-polar',
+  templateUrl: './polar.component.html',
+  styleUrls: ['./polar.component.scss']
 })
-export class PieComponent {
-  constructor() {}
+export class PolarComponent  {
+
+  constructor() { }
 
   title = 'chartjs-project';
   canvas: any;
@@ -19,15 +20,15 @@ export class PieComponent {
 
     this.ctx = this.canvas.getContext('2d');
 
-    const data1 = [5,4,3,2,1.5];
+    const data1 = [250,120,50];
     const total:any=  data1.reduce((a: any, b:any) => a + b)
 
 
     const doooo = new Chart(this.ctx, {
-      type: 'polarArea',
+      type: 'doughnut',
 
       options: {
-        plugins: { title: { display: true, text: `Expenses in Lakhs (Total= ${total} L₹)` } },
+        plugins: { title: { display: true, text: `Fees payment status` } },
       },
       data: {
         datasets: [
@@ -46,7 +47,7 @@ export class PieComponent {
             hoverOffset: 8,
           },
         ],
-        labels: ['Faculty', 'Electricity', 'Canteen', 'Events','Funds'],
+        labels: ['Fees Paid', 'Not-Paid', 'Not-Applicable'],
       },
     });
   }
